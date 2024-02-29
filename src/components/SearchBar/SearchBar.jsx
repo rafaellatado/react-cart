@@ -40,6 +40,8 @@ function SearchBar() {
         // Aqui embaixo utilizamos a função setSearchValue dentro do nosso input 
         // para pegarmos o valor digitado no input e atualizar o estado searchValue
         onChange={ ({ target }) => setSearchValue(target.value) } 
+        // or onChange={ (event) => setSearchValue(event.target.value) }
+        
         required
       />
       {/* Uma boa forma de testar nosso estado (searchValue) é adicionar ele em algum lugar do código, 
