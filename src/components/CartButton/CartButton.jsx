@@ -17,6 +17,7 @@ function CartButton() {
       <AiOutlineShoppingCart />
       {cartItems.length > 0 && <span className="cart-status">{cartItems.length}</span>}
     </button>
+    // Se ou quando "cartItems.length > 0" for verdadeiro, rederizamos a span tag ao lado direito de "&&"
   );
 }
 
