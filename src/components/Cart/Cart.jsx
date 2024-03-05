@@ -20,6 +20,11 @@ function Cart() {
   It changes with each iteration, cycling through each element of the array.*/
 
   return (
+    /* In the line below we use a template literal to create a dynamic class. Here's how it works:
+    We use template literals to transform expressions and functions into strings, and we do that by
+    starting with the dollar sign "$". Then we use a ternary conditional that says: When 'isCartVisible' is truthy
+    we'll add 'cart--active' to the clasName, resulting in 'cart cart--active'. When 'isCartVisible' is false,
+    we'll ad an empty string, meaning the className won't change. It will keep being 'cart'. */
     <section className={`cart ${isCartVisible ? 'cart--active' : ''}`}>
       <div className="cart-items">
         { cartItems.map((cartItem) => <CartItem key={cartItem.id} data={cartItem} />) }
