@@ -6,10 +6,10 @@ import './Header.css';
 
 function Header() {
   return (
-    <header className="header">
+    <header className="header"> 
       <div className="container">
         <SearchBar />
-        <CartButton />
+        <CartButton /> 
       </div>
     </header>
   );
