@@ -11,10 +11,12 @@ function SearchBar() {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearch = async (event) => {
-    //alert pra testar te a função estava funcionando quando eu envio o formulário
+    // alert pra testar se a função estava funcionando quando eu envio o formulário
     //alert('teste');
 
     event.preventDefault();
+    // O comportamento default de um formulário é que quando envio (submit) ele, a página atualiza
+    
     setLoading(true);
     const products = await fetchProducts(searchValue);
     //console pra checar no console do browser se a variável 'const' está funcionando
@@ -38,8 +40,10 @@ function SearchBar() {
         value={searchValue}
 
         // Aqui embaixo utilizamos a função setSearchValue dentro do nosso input 
-        // para pegarmos o valor digitado no input e atualizar o estado searchValue
+        // para pegarm o valor digitado no input e atualizar o estado searchValue
         onChange={ ({ target }) => setSearchValue(target.value) } 
+        // or onChange={ (event) => setSearchValue(event.target.value) }
+        
         required
       />
       {/* Uma boa forma de testar nosso estado (searchValue) é adicionar ele em algum lugar do código, 
